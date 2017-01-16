@@ -1,0 +1,15 @@
+<ul class="list-group checkbox">
+  <% @recipes.each do |recipe| %>
+    <li class="list-group-item">
+      <label>
+        <input type="checkbox" value="">
+        <strong><%= recipe.name %></strong> | <em><%= recipe.difficulty %></em> (<%= recipe.cooking_time %>)<br>
+        <%= recipe.description %>
+      </label>
+    </li>
+  <% end %>
+</ul>
+
+<a class="btn btn-primary" href="/new_recipe" role="button">New recipe</a>
+<a class="btn btn-danger" role="button" disabled="disabled">Delete recipe</a>
+<a class="btn btn-default" role="button">Import from Marmiton recipe</a>
